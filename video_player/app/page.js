@@ -1,6 +1,6 @@
 "use client";
-import React, { useState, createContext, useEffect, useRef } from 'react';
-import Player from './player/VideoPlayer';
+import React, { useState, createContext, useRef } from 'react';
+import VideoPlayer from './player/VideoPlayer'
 import Playlist from './player/Playlist';
 import Data from './player/data'
 
@@ -24,14 +24,18 @@ export default function Home() {
   return (
     <main >
       <div>
-        <h1 className='font-bold text-center p-4 '>Welcome to your favourate video player </h1>
+        <h1 className='font-bold text-center pt-8 text-4xl'>Welcome to your favourate video player </h1>
       </div>
-      <div className='flex justify-between m-8'>
+      <div className='flex justify-between m-8 '>
         <VideoDataContext.Provider
           value={{ currentVideoInfo, setCurrentVideoInfo, videoRef, autoPlayNext, playList, setPlayList }}
         >
-          <Player />
-          <Playlist />
+          <div>
+            <VideoPlayer />
+          </div>
+          <div>
+            <Playlist />
+          </div>
         </VideoDataContext.Provider>
       </div>
     </main>
