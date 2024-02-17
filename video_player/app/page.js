@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <main >
       <div>
-        <h1 className='font-bold text-center pt-8 text-4xl'>Welcome to your favourate video player </h1>
+        <h1 className='font-bold text-center pt-8 text-4xl'>Welcome to your favorite video player </h1>
       </div>
       <div className='flex justify-between m-8 '>
         <VideoDataContext.Provider
