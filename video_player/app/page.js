@@ -9,7 +9,8 @@ export const VideoDataContext = createContext()
 export default function Home() {
 
   const videoRef = useRef(null)
-  const [currentVideoInfo, setCurrentVideoInfo] = useState(Data[0])
+  const [playList, setPlayList] = useState(Data)
+  const [currentVideoInfo, setCurrentVideoInfo] = useState(playList[0])
 
   // Wait for 3s and play next video once the current video ends 
   const autoPlayNext = (index) => {
@@ -26,7 +27,9 @@ export default function Home() {
         <h1 className='font-bold text-center p-4 '>Welcome to your favourate video player </h1>
       </div>
       <div className='flex justify-between m-8'>
-        <VideoDataContext.Provider value={{ currentVideoInfo, setCurrentVideoInfo, videoRef, autoPlayNext }}>
+        <VideoDataContext.Provider
+          value={{ currentVideoInfo, setCurrentVideoInfo, videoRef, autoPlayNext, playList, setPlayList }}
+        >
           <Player />
           <Playlist />
         </VideoDataContext.Provider>

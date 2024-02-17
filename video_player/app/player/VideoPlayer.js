@@ -8,7 +8,6 @@ function Player() {
     const { currentVideoInfo, videoRef, autoPlayNext } = useContext(VideoDataContext)
 
 
-    console.log(currentVideoInfo, 'video in player')
     return (
 
         <div className='flex justify-between '>
