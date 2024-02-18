@@ -47,7 +47,7 @@ function Playlist() {
     return (
         <div>
             {playList.map((item, idx) => {
-                return <div key={item.sources} onClick={() => updateTheVideo(item, idx)} className='relative flex space-x-3  w-full hover:cursor-pointer h-20  hover:height-24 pb-2 px-2'
+                return <div key={item.sources} onClick={() => updateTheVideo(item, idx)} className='relative pr-6 flex space-x-3   hover:cursor-pointer h-20  hover:height-24 pb-2 '
                     draggable
                     onDragStart={() => dragItem.current = idx}
                     onDragEnter={() => dragOverItem.current = idx}

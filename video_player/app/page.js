@@ -24,16 +24,16 @@ export default function Home() {
   return (
     <main >
       <div>
-        <h1 className='font-bold text-center pt-8 text-4xl'>Welcome to your favourate video player </h1>
+        <h1 className='font-bold text-center pt-8 pb-8 text-4xl'>Welcome to your favourate video player </h1>
       </div>
-      <div className='flex justify-between m-8 '>
+      <div className='flex justify-between m-1 w-full '>
         <VideoDataContext.Provider
           value={{ currentVideoInfo, setCurrentVideoInfo, videoRef, autoPlayNext, playList, setPlayList }}
         >
-          <div>
+          <div style={{ width: "75%" }}>
             <VideoPlayer />
           </div>
-          <div>
+          <div style={{ width: "25" }}>
             <Playlist />
           </div>
         </VideoDataContext.Provider>
