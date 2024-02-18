@@ -47,7 +47,7 @@ function Playlist() {
     return (
         <div>
             {playList.map((item, idx) => {
-                return <div key={item.sources} onClick={() => updateTheVideo(item, idx)} className='relative pr-6 flex space-x-3   hover:cursor-pointer h-20  hover:height-24 pb-2 '
+                return <div key={item.sources} onClick={() => updateTheVideo(item, idx)} className='relative pr-6 flex space-x-3   hover:cursor-pointer h-20 shadow-md  hover:shadow-xl my-5 hover:height-24 pb-2 '
                     draggable
                     onDragStart={() => dragItem.current = idx}
                     onDragEnter={() => dragOverItem.current = idx}
@@ -56,7 +56,7 @@ function Playlist() {
                 >
                     <img src={item.thumb} />
                     <div className='flex justify-between w-full'>
-                        <p className='font-semibold text-gray-900'>{item.title}</p>
+                        <p className='font-semibold font-serif text-gray-900'>{item.title}</p>
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                         </svg>
