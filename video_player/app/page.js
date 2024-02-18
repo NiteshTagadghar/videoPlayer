@@ -22,11 +22,11 @@ export default function Home() {
   }
 
   return (
-    <main >
+    <main className='bg-slate-100'>
       <div>
-        <h1 className='font-bold text-center pt-8 text-4xl'>Welcome to your loved video player </h1>
+        <h1 className='font-bold text-center pt-8 font-serif  text-4xl'>Welcome to your loved video player </h1>
       </div>
-      <div className='flex justify-between m-1 w-full '>
+      <div className='flex justify-between mt-8 m-1 w-full '>
         <VideoDataContext.Provider
           value={{ currentVideoInfo, setCurrentVideoInfo, videoRef, autoPlayNext, playList, setPlayList }}
         >
